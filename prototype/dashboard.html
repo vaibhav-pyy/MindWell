@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MindWell — Wellness Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+<script src="nav.js"></script>
+</head>
+<body>
+<div class="phone-wrap">
+  <div class="phone">
+    <div style="padding:24px 20px 4px;flex-shrink:0;">
+      <div style="font-size:13px;color:var(--muted);font-weight:600;">Hi, Vaibhav</div>
+      <div style="font-size:20px;font-weight:800;color:var(--teal-900);margin-top:2px;">Here's how you're doing</div>
+    </div>
+    <div style="flex-grow:1;overflow-y:auto;padding:16px 20px 12px;display:flex;flex-direction:column;gap:16px;">
+
+      <div class="card" style="padding:24px;display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="position:relative;width:140px;height:140px;">
+          <svg width="140" height="140" viewBox="0 0 140 140" style="transform:rotate(-90deg);">
+            <circle cx="70" cy="70" r="54" fill="none" stroke="var(--border)" stroke-width="10"/>
+            <circle id="ring" cx="70" cy="70" r="54" fill="none" stroke="var(--teal-700)" stroke-width="10" stroke-linecap="round" stroke-dasharray="339.3" stroke-dashoffset="95"/>
+          </svg>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <div id="scoreVal" style="font-size:34px;font-weight:800;color:var(--ink);line-height:1;">72</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px;">out of 100</div>
+          </div>
+        </div>
+        <div id="statusText" style="font-size:14.5px;font-weight:700;color:var(--teal-700);">Doing okay this week</div>
+        <div style="font-size:11.5px;color:var(--muted);text-align:center;line-height:1.5;">Your proposed wellness score blends recent stress, mood, sleep and academic-pressure signals.</div>
+        <input id="scoreSlider" type="range" min="0" max="100" value="72" style="width:100%;margin-top:6px;">
+      </div>
+
+      <div class="card" style="padding:20px;display:flex;flex-direction:column;gap:14px;">
+        <div style="font-size:13px;font-weight:700;color:var(--teal-900);">This week's signals</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px;"><span>Stress</span><span style="color:var(--muted);">45%</span></div><div class="progress-bar"><div class="progress-fill" style="width:45%;background:var(--amber);"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px;"><span>Mood</span><span style="color:var(--muted);">68%</span></div><div class="progress-bar"><div class="progress-fill" style="width:68%;background:var(--teal-700);"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px;"><span>Sleep</span><span style="color:var(--muted);">55%</span></div><div class="progress-bar"><div class="progress-fill" style="width:55%;background:var(--teal-700);"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px;"><span>Academic pressure</span><span style="color:var(--muted);">72%</span></div><div class="progress-bar"><div class="progress-fill" style="width:72%;background:var(--coral);"></div></div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--teal-900);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:12px;color:#FFFFFF;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div style="font-size:13px;font-weight:700;background:rgba(255,255,255,0.12);padding:5px 10px;border-radius:999px;">Level 4</div>
+          <div style="font-size:12px;font-weight:600;display:flex;align-items:center;gap:5px;color:var(--amber);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z" fill="var(--amber)"/></svg>
+            6-day streak
+          </div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px;color:rgba(255,255,255,0.85);"><span>320 XP</span><span>500 XP to Level 5</span></div>
+          <div style="height:8px;border-radius:4px;background:rgba(255,255,255,0.18);overflow:hidden;"><div style="height:100%;width:64%;background:var(--amber);border-radius:4px;"></div></div>
+        </div>
+      </div>
+
+      <a href="activities.html" class="card" style="padding:18px;display:flex;align-items:center;gap:14px;">
+        <div style="width:44px;height:44px;border-radius:14px;background:var(--coral-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z" stroke="var(--coral-700)" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="flex-grow:1;">
+          <div style="font-size:14px;font-weight:700;color:var(--teal-900);">5-Minute Breathing Reset</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px;">Suggested for you &middot; +15 XP</div>
+        </div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <div style="font-size:11px;color:var(--muted);text-align:center;line-height:1.5;padding:0 8px 8px;">This score is a proposed self-reflection tool, not a clinical diagnosis.</div>
+    </div>
+    <div id="navSlot"></div>
+  </div>
+</div>
+<script>
+document.getElementById('navSlot').innerHTML = renderBottomNav('dashboard');
+
+const radius = 54;
+const circumference = 2 * Math.PI * radius;
+const ring = document.getElementById('ring');
+const scoreVal = document.getElementById('scoreVal');
+const statusText = document.getElementById('statusText');
+const slider = document.getElementById('scoreSlider');
+
+function updateScore(score) {
+  const offset = circumference * (1 - score / 100);
+  ring.setAttribute('stroke-dashoffset', offset);
+  scoreVal.textContent = score;
+  let text, color;
+  if (score >= 70) { text = 'Doing okay this week'; color = 'var(--teal-700)'; }
+  else if (score >= 40) { text = 'A bit of a rough patch'; color = 'var(--amber)'; }
+  else { text = "Let's check in together"; color = 'var(--coral)'; }
+  statusText.textContent = text;
+  statusText.style.color = color;
+  ring.setAttribute('stroke', color);
+}
+updateScore(72);
+slider.addEventListener('input', function (e) { updateScore(parseInt(e.target.value, 10)); });
+</script>
+</body>
+</html>

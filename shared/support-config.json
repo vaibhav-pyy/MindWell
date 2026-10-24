@@ -1,0 +1,24 @@
+{
+  "_comment": "Single source of truth for crisis/helpline details. Read by the Flask backend (app/config.py) and the React frontend (src/lib/support.js). Verified against MoHFW / PIB announcements (Oct 2026). Re-verify at https://telemanas.mohfw.gov.in before deployment.",
+  "country": "India",
+  "helpline": {
+    "name": "Tele-MANAS",
+    "full_name": "Tele Mental Health Assistance and Networking Across States",
+    "operator": "Ministry of Health and Family Welfare, Government of India",
+    "short_code": "14416",
+    "short_code_tel": "14416",
+    "toll_free": "1800-891-4416",
+    "toll_free_tel": "18008914416",
+    "hours": "24 x 7",
+    "languages": "20+ Indian languages",
+    "website": "https://telemanas.mohfw.gov.in",
+    "description": "Free, confidential, 24x7 mental-health support from trained counsellors, with referral to mental-health professionals where needed."
+  },
+  "emergency_services": {
+    "name": "National Emergency Number",
+    "number": "112",
+    "tel": "112",
+    "description": "Call 112 if you or someone else is in immediate danger."
+  },
+  "affiliation_disclaimer": "MindWell is an independent student project. It is not operated by, endorsed by, or affiliated with Tele-MANAS or the Government of India."
+}
